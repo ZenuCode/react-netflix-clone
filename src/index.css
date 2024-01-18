@@ -1,0 +1,29 @@
+body {
+  font-family: "Segoe UI";
+  background-color: black;
+  color: white;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
+}
+
+.btn1 {
+  border: none;
+  color: white;
+  width: 6rem;
+  height: 2.5rem;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.login-btn {
+  background-color: black;
+}
+
+.signup-btn {
+  background-color: red;
+}
