@@ -1,5 +1,14 @@
 # Getting Started with Create React App
 
+# Completed
+- Basic Structure & Firebase Setup
+- Logic for Home, Login, Profile & Signup Page
+
+# Need to Add
+- Styling
+- Protected Login (Route)
+- Other Pages
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
