@@ -1,13 +1,16 @@
 # Getting Started with Create React App
 
 # Completed
-- Basic Structure & Firebase Setup
-- Logic for Home, Login, Profile & Signup Page
+- Entire Website Logic:
+    - Homepage
+    - Login/Logout with Firebase
+    - Signup with Firebase
+    - Personal Profile with Protected Routes
+- Firebase Setup & Deployment connected to Github
+- Services with TMDB API to personal service file
 
-# Need to Add
-- Styling
-- Protected Login (Route)
-- Other Pages
+# Need to Add/Complete
+- Styling of Entire Website
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

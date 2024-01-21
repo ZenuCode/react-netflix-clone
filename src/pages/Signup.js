@@ -10,7 +10,7 @@ const Signup = () => {
     const {user, signUp} = UserAuth();
     const navigate = useNavigate();
 
-    const handlerFormSubmit = async (e) => {
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
         try {
             await signUp(email, password)
@@ -31,7 +31,7 @@ const Signup = () => {
                     <div>
                         <h1>Sign Up</h1>
                         <form 
-                            onSubmit={handlerFormSubmit}
+                            onSubmit={handleFormSubmit}
                             className="signup-form"
                         >
                             <input 

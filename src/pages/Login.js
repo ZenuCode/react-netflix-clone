@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { UserAuth } from "../context/AuthContext";
 
 
 const Login = () => {
@@ -7,10 +8,18 @@ const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const handlerFormSubmit = (e) => {
+    const {user, logIn} = UserAuth();
+    const navigate = useNavigate();
+
+    const handlerFormSubmit = async (e) => {
         e.preventDefault();
-        console.log(email);
-        console.log(password);
+        
+        try {
+            await logIn(email, password);
+            navigate("/");
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     return (
