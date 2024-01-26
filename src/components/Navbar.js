@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
         <div className="nav-container">
             <Link to='/'>
-                <h1 className="logo">NETFLIX</h1>
+                <img className="logo" src="/assets/fakelogo.png" alt="logo" />
             </Link>
 
             {

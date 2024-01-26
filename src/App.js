@@ -7,14 +7,14 @@ import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar"
 import { AuthContextProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
+import Homepage from './pages/Homepage';
 
 const App = () => {
   return (
     <>
       <AuthContextProvider>
-        <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Homepage />} />
           <Route path="/login" element={<Login />} />
           <Route 
             path="/profile" 

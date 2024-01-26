@@ -27,3 +27,76 @@ body {
 .signup-btn {
   background-color: red;
 }
+
+.nav-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+/* ////////////////////// */
+
+.homepage-container {
+  height: auto;
+}
+
+.logo {
+  width: 12rem;
+}
+
+.top-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  transform: translate(0%, -30%);
+  z-index: 1;
+  overflow: hidden;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.top-image-container p {
+
+}
+
+@media only screen and (max-width: 800px) {
+  .top-image-container {
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://assets.nflxext.com/ffe/siteui/vlv3/9134db96-10d6-4a64-a619-a21da22f8999/325e6bcc-7960-4b4e-8c80-8fecc45e50b2/KR-en-20240115-trifectadaily-perspective_alpha_website_small.jpg");
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1300px) {
+  .top-image-container {
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://assets.nflxext.com/ffe/siteui/vlv3/9134db96-10d6-4a64-a619-a21da22f8999/325e6bcc-7960-4b4e-8c80-8fecc45e50b2/KR-en-20240115-trifectadaily-perspective_alpha_website_medium.jpg");
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 1301px) {
+  .top-image-container {
+    height: 90vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://assets.nflxext.com/ffe/siteui/vlv3/9134db96-10d6-4a64-a619-a21da22f8999/325e6bcc-7960-4b4e-8c80-8fecc45e50b2/KR-en-20240115-trifectadaily-perspective_alpha_website_large.jpg");
+    object-fit: cover;
+  }
+
+  .top-text {
+    font-size: 40px;
+  }
+  
+  .mid-text {
+    font-size: 30px;
+  }
+  
+  .bot-text{
+    font-size: 20px;
+  }
+}
