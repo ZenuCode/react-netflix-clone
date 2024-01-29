@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
+import { DropdownButton, Dropdown } from 'react-bootstrap';
 
 const Navbar = () => {
-    const {user, logOut} = UserAuth();
+    const { user, logOut } = UserAuth();
+    const [language, setLanguage] = useState("English");
+    const [dropdown, setDropdown] = useState(false);
     const navigate = useNavigate();
+
+    const seeLanguage = () => {
+        setDropdown(!dropdown);
+    };
 
     const handleLogout = async () => {
         try {
@@ -21,23 +28,28 @@ const Navbar = () => {
                 <img className="logo" src="/assets/fakelogo.png" alt="logo" />
             </Link>
 
+
             {
                 user?.email ? (
-                    <div>
-                        <Link to='/profile'>
-                            <button className="login-btn btn1">Profile</button>
-                        </Link>
-                        <button onClick={handleLogout} className="signup-btn btn1">
-                            Logout
+                    <div className="nav-left">
+                        <DropdownButton className="lang-btn" title={language}>
+                            <Dropdown.Item className="lang-ele">English</Dropdown.Item>
+                            <Dropdown.Item className="lang-ele">Korean</Dropdown.Item>
+                        </DropdownButton>
+
+                        <button onClick={handleLogout} className="signinout-btn">
+                            Sign Out
                         </button>
                     </div>
                 ) : (
-                    <div>
-                        <Link to='/login'>
-                            <button className="login-btn btn1">Login</button>
-                        </Link>
+                    <div className="nav-left">
+                        <DropdownButton className="lang-btn" title={language}>
+                            <Dropdown.Item className="lang-ele">English</Dropdown.Item>
+                            <Dropdown.Item className="lang-ele">Korean</Dropdown.Item>
+                        </DropdownButton>
+                        
                         <Link to='/signup'>
-                            <button className="signup-btn btn1">Sign Up</button>
+                            <button className="signinout-btn">Sign In</button>
                         </Link>
                     </div>
                 )
