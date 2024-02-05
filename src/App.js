@@ -1,13 +1,13 @@
 import './App.css';
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
 import Profile from "./pages/Profile";
-import Signup from "./pages/Signup";
+import Signup from "./pages/Signup/Signup";
 import Navbar from "./components/Navbar"
 import { AuthContextProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
-import Homepage from './pages/Homepage';
+import Homepage from './pages/Homepage/Homepage';
+import Signin from './pages/Signin/Signin';
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
       <AuthContextProvider>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/signin" element={<Signin />} />
           <Route 
             path="/profile" 
             element={

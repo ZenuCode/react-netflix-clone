@@ -1,0 +1,327 @@
+.hp-container {
+  font-family: "Segoe UI";
+  background-color: black;
+  color: white;
+}
+
+.hp-top-container {
+  z-index: 1;
+}
+
+.hp-top-text {
+  width: 100%;
+  padding: 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hp-top-top-text {
+  padding: 5px;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.hp-top-mid-text {
+  padding: 5px;
+  margin: 8px;
+}
+
+.hp-top-bot-text {
+  padding: 5px;
+  margin: 8px;
+}
+
+.hp-signup-form {
+  display: flex;
+  gap: 20px;
+  color: white;
+}
+
+.hp-form-input {
+  width: 300px;
+  height: 4px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hp-form-btn {
+  width: 200px;
+  height: 45px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  border: none;
+}
+
+.hp-home-line {
+  border: 0;
+  height: 8px;
+  background-color: rgba(169, 169, 169, 0.219);
+}
+
+@media only screen and (max-width: 800px) {
+  .hp-top-container {
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://assets.nflxext.com/ffe/siteui/vlv3/9134db96-10d6-4a64-a619-a21da22f8999/325e6bcc-7960-4b4e-8c80-8fecc45e50b2/KR-en-20240115-trifectadaily-perspective_alpha_website_small.jpg");
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1300px) {
+  .hp-top-container {
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://assets.nflxext.com/ffe/siteui/vlv3/9134db96-10d6-4a64-a619-a21da22f8999/325e6bcc-7960-4b4e-8c80-8fecc45e50b2/KR-en-20240115-trifectadaily-perspective_alpha_website_medium.jpg");
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 1301px) {
+  .hp-top-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://assets.nflxext.com/ffe/siteui/vlv3/9134db96-10d6-4a64-a619-a21da22f8999/325e6bcc-7960-4b4e-8c80-8fecc45e50b2/KR-en-20240115-trifectadaily-perspective_alpha_website_large.jpg");
+  }
+
+  .hp-top-top-text {
+    font-size: 50px;
+  }
+
+  .hp-top-mid-text {
+    font-size: 25px;
+  }
+
+  .hp-top-bot-text {
+    font-size: 22px;
+  }
+}
+
+.hp-bot-container-text {
+  width: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hp-bot-text,
+.hp-bot-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  font-size: 12px;
+  padding-left: calc(12% - 1px);
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.hp-bot-title {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hp-last {
+  margin-bottom: 60px;
+}
+
+/* Navbar Start */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-signinout-btn,
+.nav-lang-btn {
+  border: none;
+  color: white;
+  width: 4.5rem;
+  height: 2rem;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.nav-signinout-btn {
+  background-color: red;
+}
+
+.nav-lang-btn {
+  display: flex;
+  flex-direction: column;
+  width: 8rem;
+  background-color: black;
+  border: 1px solid white;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  padding-left: 30px;
+  padding-top: 6px;
+}
+
+.nav-lang-ele {
+  display: flex;
+  width: 8rem;
+  height: 40px;
+  background-color: black;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.nav-lang-img {
+  color: white;
+  background: linear-gradient(to bottom, black, white);
+}
+
+.bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: calc(60% - 160px);
+}
+
+.nav-logo {
+  width: 14rem;
+}
+
+/* Navbar End */
+
+/* HomeInfo Start */
+.mid-element {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  margin: auto;
+  height: 600px;
+  gap: 150px;
+}
+
+.mid-text {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  font-family: sans-serif;
+  font-weight: bold;
+  align-items: left;
+  justify-content: center;
+}
+
+.mid-top-text {
+  font-size: 50px;
+  margin: 0px;
+}
+
+.mid-bot-text {
+  font-size: 22px;
+}
+
+.mid-media {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid-img,
+.mid-video {
+  max-width: 100%;
+  height: auto;
+}
+
+.mid-img {
+  position: absolute;
+}
+
+.mid-video {
+  transform: translate(-0.5%, -3%) scale(97%);
+  position: absolute;
+}
+
+.mid-video-two {
+  transform: translate(-1%, -30%) scale(82%);
+  position: absolute;
+  z-index: -1;
+}
+
+/* Homeinfo End */
+
+/* FAQ Start */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.faq-title {
+  font-size: 50px;
+  font-weight: bold;
+  padding: 0;
+  margin: 15px;
+  margin-top: 30px;
+}
+
+.faq {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  align-items: center;
+  width: calc(60% - 80px);
+  height: 80px;
+  color: white;
+  font-size: 25px;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.233);
+  transition: all 0.5s ease;
+}
+
+.faq-q:hover {
+  background-color: #2b2a2a42;
+}
+
+.faq-a {
+  border-top: 1px solid black;
+  display: flex;
+  width: calc(60% - 160px);
+  padding: 40px;
+  height: auto;
+  align-items: center;
+  font-size: 25px;
+  padding: 20px 40px;
+  background-color: rgba(128, 128, 128, 0.123);
+}
+
+/* FAQ End*/

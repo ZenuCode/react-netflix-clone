@@ -1,0 +1,69 @@
+.signup-container {
+    font-family: "Segoe UI";
+}
+
+.signup-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.signup-logo-c {
+    padding-top: 10px;
+    padding-left: 40px;
+    border: 0px;
+}
+
+.signup-logo {
+    width: 10rem;
+}
+
+.signup-signin-link {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 60px;
+}
+
+.signup-line {
+    border: 0;
+    height: 2px;
+    background-color: rgba(169, 169, 169, 0.219);
+}
+
+.signup-mid-container {
+    height: 650px;
+}
+
+
+
+
+/* */
+.signup-bot-container {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 50px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.signup-bot-text,
+.signup-bot-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-size: 12px;
+    padding-left: calc(12% - 1px);
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.signup-bot-title {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

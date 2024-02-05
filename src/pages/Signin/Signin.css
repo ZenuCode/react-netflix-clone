@@ -1,0 +1,142 @@
+.signin-login-logo {
+    padding-left: 245px;
+    height: 100px;
+    width: 4rem;
+}
+
+.signin-logo {
+    width: 12rem;
+}
+
+.signin-top-container {
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI";
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://assets.nflxext.com/ffe/siteui/vlv3/9134db96-10d6-4a64-a619-a21da22f8999/325e6bcc-7960-4b4e-8c80-8fecc45e50b2/KR-en-20240115-trifectadaily-perspective_alpha_website_large.jpg");
+    object-fit: cover;
+}
+
+.signin-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-box {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 35px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.signin-title {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 30px;
+    margin-top: 15px;
+    color: white;
+}
+
+.signin-form-page {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.signin-form-input {
+    background-color: rgba(0, 0, 0, 0.363);
+    width: 19.5rem;
+    height: 3rem;
+    border-radius: 5px;
+    font-size: 14px;
+    border: solid rgba(255, 255, 255, 0.644) 1px;
+    color: white;
+    text-indent: 10px;
+}
+
+.signin-form-btn-submit {
+    border: none;
+    color: white;
+    background-color: red;
+    width: 20rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 0px;
+}
+
+.signin-form-btn-find-pw {
+    border: none;
+    color: white;
+    background-color: transparent;
+    width: 20rem;
+    height: 2rem;
+    border-radius: 5px;
+    font-size: 14px;
+    padding-bottom: 50px;
+}
+
+.signin-form-checkbox {
+    color: white;
+}
+
+.signin-checkbox-text {
+    margin-left: 5px;
+    color: white;
+}
+
+.signin-form-bot {
+    padding-left: 32px; 
+    padding-top: 0px;
+}
+
+.signin-form-bot-3 {
+    display: flex;
+    gap: 10px;
+    color: rgb(155, 153, 153);
+}
+
+.signin-signup-link {
+    color: white;
+    text-decoration: none;
+}
+
+.signin-form-bot-4 {
+    font-size: 12px;
+    color: grey;
+}
+
+.signin-bot-container {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    color: grey;
+}
+
+.signin-bot-text,
+.signin-bot-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-size: 12px;
+    padding-left: calc(12% - 1px);
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.signin-bot-title {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

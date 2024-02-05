@@ -1,8 +1,9 @@
 import React, { useState, useRef } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/Navbar";
 import { useNavigate } from "react-router-dom";
-import HomeInfo from "../components/HomeInfo";
-import HomeFAQ from "../components/HomeFAQ";
+import HomeInfo from "../../components/HomeInfo";
+import HomeFAQ from "../../components/HomeFAQ";
+import "./Homepage.css"
 
 const Homepage = () => {
     const [email, setEmail] = useState('');
@@ -27,19 +28,19 @@ const Homepage = () => {
     }
 
     return (
-        <div className="homepage-container">
-            <div className="top-container">
+        <div className="hp-container">
+            <div className="hp-top-container">
                 <Navbar />
-                <div className="top-container-text">
-                    <p className="top-top-text">Unlimited movies, TV shows, and more</p>
-                    <p className="top-mid-text">Watch anywhere. Cancel anytime.</p>
-                    <p className="top-bot-text">Ready to watch? Enter your email to create or restart your membership.</p>
+                <div className="hp-top-text">
+                    <p className="hp-top-top-text">Unlimited movies, TV shows, and more</p>
+                    <p className="hp-top-mid-text">Watch anywhere. Cancel anytime.</p>
+                    <p className="hp-top-bot-text">Ready to watch? Enter your email to create or restart your membership.</p>
                     <form
                         onSubmit={handlerFormSubmit}
-                        className="signup-form"
+                        className="hp-signup-form"
                     >
                         <input
-                            className="form-input"
+                            className="hp-form-input"
                             ref={emailRef}
                             type="email"
                             placeholder="Email address"
@@ -47,13 +48,13 @@ const Homepage = () => {
                             value={email}
                             onChange={handleEmailChange}
                         />
-                        <button className="form-btn" disabled={!emailRef.current?.validity.valid}>Get Started</button>
+                        <button className="hp-form-btn" disabled={!emailRef.current?.validity.valid}>Get Started</button>
                         {buttonClicked && !emailRef.current?.validity.valid && <p style={{ color: 'red' }}>Valid email required.</p>}
                     </form>
                 </div>
             </div>
             
-            <div className="mid-container">
+            <div className="hp-mid-container">
                 <HomeInfo
                     id={1}
                     topText={"Enjoy on your TV"}
@@ -61,7 +62,7 @@ const Homepage = () => {
                     mediaImg={"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"}
                     mediaVideo={"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"}
                 />
-                <hr className="home-line" />
+                <hr className="hp-home-line" />
                 <HomeInfo
                     id={2}
                     topText={"Watch everywhere"}
@@ -69,14 +70,14 @@ const Homepage = () => {
                     mediaImg={"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png"}
                     mediaVideo={"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v"}
                 />
-                <hr className="home-line" />
+                <hr className="hp-home-line" />
                 <HomeInfo
                     id={3}
                     topText={"Create profiles for kids"}
                     botText={"Send kids on adventures with their favorite characters in a space made just for them—free with your membership."}
                     mediaImg={"https://occ-0-988-2219.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqexltvN1YmvXYIfX8B9CYwooUSIzOKneblRFthZAFsYLMgKMyNfeHwk16DmEkpIIcb6A3.png?r=f55"}
                 />
-                <hr className="home-line" />
+                <hr className="hp-home-line" />
                 <HomeInfo
                     id={4}
                     topText={"Download your shows to watch offline"}
@@ -84,7 +85,7 @@ const Homepage = () => {
                     mediaImg={"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"}
                 />
             </div>
-            <hr className="home-line" />
+            <hr className="hp-home-line" />
             <div className="faq-container">
                 <p className="faq-title">Frequently Asked Questions</p>
                 <HomeFAQ
@@ -115,14 +116,14 @@ const Homepage = () => {
                     answer2="Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see."
                 />
             </div>
-            <div className="bot-container-text">
-                <p className="top-bot-text">Ready to watch? Enter your email to create or restart your membership.</p>
+            <div className="hp-bot-container-text">
+                <p className="hp-top-bot-text">Ready to watch? Enter your email to create or restart your membership.</p>
                 <form
                     onSubmit={handlerFormSubmit}
-                    className="signup-form"
+                    className="hp-signup-form"
                 >
                     <input
-                        className="form-input"
+                        className="hp-form-input"
                         ref={emailRef}
                         type="email"
                         placeholder="Email address"
@@ -130,17 +131,17 @@ const Homepage = () => {
                         value={email}
                         onChange={handleEmailChange}
                     />
-                    <button className="form-btn" disabled={!emailRef.current?.validity.valid}>Get Started</button>
+                    <button className="hp-form-btn" disabled={!emailRef.current?.validity.valid}>Get Started</button>
                     {buttonClicked && !emailRef.current?.validity.valid && <p style={{ color: 'red' }}>Valid email required.</p>}
                 </form>
             </div>
-            <hr className="home-line" />
-            <div className="bot-text">
-                <p className="bot-title">Fakeflix South Korea</p>
-                <p className="bot-text">This is a fake website</p>
-                <p className="bot-text">Representative: Jaehyeok Lee</p>
-                <p className="bot-text">Email: lee.david0706@gmail.com</p>
-                <p className="bot-text last">Firebase DB</p>
+            <hr className="hp-home-line" />
+            <div className="hp-bot-text">
+                <p className="hp-bot-title">Fakeflix South Korea</p>
+                <p className="hp-bot-text">This is a fake website</p>
+                <p className="hp-bot-text">Representative: Jaehyeok Lee</p>
+                <p className="hp-bot-text">Email: lee.david0706@gmail.com</p>
+                <p className="hp-bot-text hp-last">Firebase DB</p>
             </div>
         </div>
     )

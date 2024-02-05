@@ -5,13 +5,7 @@ import { DropdownButton, Dropdown } from 'react-bootstrap';
 
 const Navbar = () => {
     const { user, logOut } = UserAuth();
-    const [language, setLanguage] = useState("English");
-    const [dropdown, setDropdown] = useState(false);
     const navigate = useNavigate();
-
-    const seeLanguage = () => {
-        setDropdown(!dropdown);
-    };
 
     const handleLogout = async () => {
         try {
@@ -25,31 +19,30 @@ const Navbar = () => {
     return (
         <div className="nav-container">
             <Link to='/'>
-                <img className="logo" src="/assets/fakelogo.png" alt="logo" />
+                <img className="nav-logo" src="/assets/fakelogo.png" alt="logo" />
             </Link>
-
 
             {
                 user?.email ? (
                     <div className="nav-left">
-                        <DropdownButton className="lang-btn" title={language}>
-                            <Dropdown.Item className="lang-ele">English</Dropdown.Item>
-                            <Dropdown.Item className="lang-ele">Korean</Dropdown.Item>
-                        </DropdownButton>
+                        <select className="nav-lang-btn">
+                            <option className="nav-lang-ele">English</option>
+                            <option className="nav-lang-ele">Korean</option>
+                        </select>
 
-                        <button onClick={handleLogout} className="signinout-btn">
+                        <button onClick={handleLogout} className="nav-signinout-btn">
                             Sign Out
                         </button>
                     </div>
                 ) : (
                     <div className="nav-left">
-                        <DropdownButton className="lang-btn" title={language}>
-                            <Dropdown.Item className="lang-ele">English</Dropdown.Item>
-                            <Dropdown.Item className="lang-ele">Korean</Dropdown.Item>
-                        </DropdownButton>
+                        <select className="nav-lang-btn">
+                            <option className="nav-lang-ele"> English</option>
+                            <option className="nav-lang-ele">Korean</option>
+                        </select>
                         
-                        <Link to='/signup'>
-                            <button className="signinout-btn">Sign In</button>
+                        <Link to='/signin'>
+                            <button className="nav-signinout-btn">Sign In</button>
                         </Link>
                     </div>
                 )
