@@ -1,0 +1,16 @@
+.planform-component-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.planform-container {
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.plan-top {
+    background: url("../../../public/assets/planform.png") no-repeat center center;
+    background-size: cover;
+    color: white;
+}

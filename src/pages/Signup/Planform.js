@@ -1,22 +1,29 @@
+import "./Signup.css";
+import "./Planform.css";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./Signup.css"
+import PlanFormComp from "../../components/PlanFormComp";
+import data from './PlanformData.js';
 
-const Signup = () => {
+const PlanForm = () => {
     const [isVisible, setIsVisible] = useState(null);
     const navigate = useNavigate();
+
+    const one = data.one;
+    const two = data.two;
+    const three = data.three;
 
     useEffect(() => {
         setTimeout(() => {
             setIsVisible(true);
-        }, 100); 
+        }, 100);
     }, []);
 
     const handleNavigate = () => {
         setIsVisible(false);
         setTimeout(() => {
-            navigate("/Step1");
-        }, 200); 
+            navigate("/Step2Main");
+        }, 200);
     }
 
     return (
@@ -31,11 +38,17 @@ const Signup = () => {
             </div>
             <hr className="signup-line" />
             <div className={`signup-mid-container ${isVisible === null ? "pre" : isVisible ? "show" : "hide"}`}>
-                <img src="/assets/signup1.png" alt="signup1" />
-                <p className="signup-step0-1">STEP 1 OF 3</p>
-                <p className="signup-step0-2">Finish setting up your account</p>
-                <p className="signup-step0-3">Netflix is personalized for you. Create a password to start watching Netflix.</p>
-                <button className="signup-step0-btn" onClick={handleNavigate}>Next</button>
+                <p>STEP 2 OF 3</p>
+                <p>Choose the plan that’s right for you</p>
+                <div className="planform-component-container">
+                    <PlanFormComp data={one}/>
+                    <PlanFormComp data={two}/>
+                    <PlanFormComp data={three}/>
+                </div>
+                <p></p>
+                <p></p>
+                <p></p>
+                <button className="signup-step2-btn" onClick={handleNavigate}>Next</button>
             </div>
             <div className="signup-bot-container">
                 <p className="signup-bot-title">Fakeflix South Korea</p>
@@ -47,4 +60,4 @@ const Signup = () => {
     )
 }
 
-export default Signup;
+export default PlanForm;

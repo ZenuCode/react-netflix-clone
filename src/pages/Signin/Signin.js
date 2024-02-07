@@ -12,7 +12,7 @@ const Signin = () => {
     const { user, logIn } = UserAuth();
     const navigate = useNavigate();
 
-    const handlerFormSubmit = async (e) => {
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
 
         try {
@@ -33,7 +33,7 @@ const Signin = () => {
                     <div className="signin-box">
                         <p className="signin-title">Sign In</p>
                         <form
-                            onSubmit={handlerFormSubmit}
+                            onSubmit={handleFormSubmit}
                             className="signin-form-page"
                         >
                             <input
