@@ -1,16 +1,147 @@
+.signup-mid-container-plan {
+    height: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: left;
+    padding-bottom: 100px;
+}
+
+.planform-step-container {
+    width: 900px;
+    align-items: left;
+    text-align: left;
+}
+
+.planform-step-title {
+    font-size: 14px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    margin-left: 2px;
+    margin-bottom: 0px;
+}
+
+.planform-step-title-info {
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    margin: 0;
+}
+
+.planform-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 15px;
+    width: 930px;
+}
+
+.planform-info {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 12px;
+    color: grey;
+    text-align: left;
+}
+
 .planform-component-container {
     display: flex;
     flex-direction: row;
+    gap: 20px;
+}
+
+.planform-error {
+    font-size: 20px;
+    color: red;
+    margin: 0;
+    padding-top: 10px;
 }
 
 .planform-container {
+    display: flex;
+    flex-direction: column;
     font-size: 10px;
     padding: 0;
     margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    border-radius: 15px;
+    width: 300px;
+    height: 710px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.planform-container.clicked {
+    border: 2px solid red;
+    box-shadow: 8px 8px 8px #888888;
 }
 
 .plan-top {
     background: url("../../../public/assets/planform.png") no-repeat center center;
     background-size: cover;
     color: white;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: left;
+    text-indent: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    height: 60px;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.plan-title-top {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.plan-title-bot {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.plan-bot {
+    text-align: left;
+    margin: 0;
+    font-size: 13px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.plan-line {
+    width: 260px;
+}
+
+.plan-item-top {
+    padding-left: 21px;
+    padding-right: 21px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 3px;
+}
+
+.plan-item-bot {
+    padding-left: 21px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.planform-btn {
+    width: 400px;
+    height: 60px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 23px;
+    margin-top: 40px;
 }

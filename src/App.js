@@ -10,6 +10,7 @@ import Signin from './pages/Signin/Signin';
 import Step1 from './pages/Signup/Step1';
 import Step2Info from './pages/Signup/Step2-Info';
 import PlanForm from './pages/Signup/Planform';
+import SelectPay from './pages/Signup/SelectPay';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path='/step1' element={<Step1 />} />
           <Route path='/step2-info' element={<Step2Info />} />
           <Route path='/planform' element={<PlanForm />} />
+          <Route path='/selectpay' element={<SelectPay />} />
           <Route 
             path="/profile" 
             element={

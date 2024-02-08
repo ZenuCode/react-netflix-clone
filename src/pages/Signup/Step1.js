@@ -45,9 +45,9 @@ const Step1 = () => {
             setTimeout(() => {
                 navigate("/Step2-Info", { state: { email, password } });
             }, 200);
-        } else if (isEmailValid == false) {
+        } else if (isEmailValid ===false) {
             setIsEmailValid(false);
-        } else if (isPasswordValid == false) {
+        } else if (isPasswordValid === false) {
             setIsPasswordValid(false);
         }
     }
