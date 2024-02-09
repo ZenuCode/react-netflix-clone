@@ -24,7 +24,7 @@ const PlanForm = () => {
         setIsVisible(false);
         setTimeout(() => {
             navigate("/selectpay");
-        }, 200);
+        }, 300);
     }
 
     const handlePlanClick = (planIndex) => {

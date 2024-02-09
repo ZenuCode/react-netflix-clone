@@ -1,0 +1,136 @@
+.signup-mid-container-payment {
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: left;
+    padding-bottom: 100px;
+}
+
+.signup-mid-container-payment.pre {
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+    transform: translateX(2%);
+    filter: blur(1px);
+}
+
+.signup-mid-container-payment.show {
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+    transform: translateX(0);
+    filter: blur(0);
+}
+
+.signup-mid-container-payment.hide {
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+    transform: translateX(-2%);
+    filter: blur(2px);
+}
+
+.select-pay-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.select-pay-step {
+    font-size: 14px;
+    margin: 0;
+}
+
+.select-pay-info-top {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.select-pay-info-mid {
+    font-size: 18px;
+    margin: 5px;
+    width: 60%;
+    text-align: center;
+}
+
+.select-pay-info-bot {
+    font-size: 18px;
+    font-weight: bold;
+    width: 45%;
+    text-align: center;
+    margin: 5px;
+}
+
+.select-pay-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 500px;
+}
+
+.e2e {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: right;
+}
+
+.e2e-info {
+    font-size: 13px;
+    text-align: right;
+    margin-bottom: 2px;
+}
+
+.e2e-image {
+    margin-top: 10px;
+}
+
+.pay-btn {
+    font-size: 16px;
+    background-color: white;
+    border: rgb(167, 166, 166) 2px solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.credit-btn {
+
+}
+
+.button-left-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-left-column-text {
+    padding: 20px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    margin: 0;
+}
+
+.card-img-column-container {
+    display: flex;
+    width: 20px;
+    padding: 20px;
+    padding-left: 10px;
+    padding-top: 2px;
+    margin: 0;
+    gap: 5px;
+}
+
+.button-left-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 13px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}

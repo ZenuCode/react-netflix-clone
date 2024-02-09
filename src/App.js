@@ -1,6 +1,7 @@
 import './App.css';
 import { Route, Routes } from "react-router-dom";
-// import Home from "./pages/Home";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from './createTheme';
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup/Signup";
 import { AuthContextProvider } from './context/AuthContext';
@@ -11,29 +12,33 @@ import Step1 from './pages/Signup/Step1';
 import Step2Info from './pages/Signup/Step2-Info';
 import PlanForm from './pages/Signup/Planform';
 import SelectPay from './pages/Signup/SelectPay';
+import PaymentLoading from './pages/Signup/PaymentLoading';
 
 const App = () => {
   return (
     <>
-      <AuthContextProvider>
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/signin" element={<Signin />} />
-          <Route path='/step1' element={<Step1 />} />
-          <Route path='/step2-info' element={<Step2Info />} />
-          <Route path='/planform' element={<PlanForm />} />
-          <Route path='/selectpay' element={<SelectPay />} />
-          <Route 
-            path="/profile" 
-            element={
-              <ProtectedRoute>
-                <Profile />
-              </ProtectedRoute>
-            } 
-          />
-          <Route path="/signup" element={<Signup />} />
-        </Routes>
-      </AuthContextProvider>
+      <ThemeProvider theme={theme}>
+        <AuthContextProvider>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/signin" element={<Signin />} />
+            <Route path='/step1' element={<Step1 />} />
+            <Route path='/step2-info' element={<Step2Info />} />
+            <Route path='/planform' element={<PlanForm />} />
+            <Route path='/selectpay' element={<SelectPay />} />
+            <Route path='payment-loading' element={<PaymentLoading />} />
+            <Route
+              path="/profile"
+              element={
+                <ProtectedRoute>
+                  <Profile />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </AuthContextProvider>
+      </ThemeProvider>
     </>
   );
 }
