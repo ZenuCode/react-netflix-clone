@@ -5,13 +5,18 @@ import "./PaymentLoading.css";
 
 const PaymentLoading = () => {
     const [contentIndex, setContentIndex] = useState(0);
-    const contentArray = ["One", "Two", "Three", "Four"];
+    const contentArray = [
+        "Usually you would be navigated to a payment component.", 
+        "Since this is fake website, we are gonna skip the payment process.", 
+        "Complete!"
+    ];
+
     const navigate = useNavigate();
 
     useEffect(() => {
         const intervalId = setInterval(() => {
             setContentIndex((prevIndex) => (prevIndex + 1) % contentArray.length);
-        }, 3000);
+        }, 3500);
 
         return () => clearInterval(intervalId);
     }, [contentArray.length]);
@@ -19,8 +24,8 @@ const PaymentLoading = () => {
     useEffect(() => {
         if (contentIndex === contentArray.length - 1) {
             const timeoutId = setTimeout(() => {
-                // navigate("/another-screen");
-            }, 2000);
+                navigate("/Home");
+            }, 3000);
 
             return () => clearTimeout(timeoutId);
         }

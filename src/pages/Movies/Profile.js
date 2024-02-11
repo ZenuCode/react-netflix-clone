@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
 import { AiOutlineClose } from 'react-icons/ai'
-import { UserAuth } from "../context/AuthContext";
-import { db } from "../services/firebase";
-import { createImageUrl } from "../services/movieServices";
+import { UserAuth } from "../../context/AuthContext";
+import { db } from "../../services/firebase";
+import { createImageUrl } from "../../services/movieServices";
 import { arrayremove, doc, onSnapshot, updateDoc } from "firebase/firestore"
 
 const Profile = () => {

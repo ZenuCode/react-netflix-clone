@@ -3,7 +3,6 @@ import MovieItem from "./MovieItem";
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
 const MovieRow = ({title, url}) => {
-    const rowId = Math.floor(Math.random() * 1000);
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -13,28 +12,35 @@ const MovieRow = ({title, url}) => {
     }, [url]);
 
     const slide = (offset) => {
-        const slider = document.getElementById('slider' + rowId)
+        const slider = document.getElementById('slider')
         slider.scrollLeft = slider.scrollLeft + offset;
     }
 
     return (
-        <>
-            <h2>{title}</h2>
-
-            <div className="movie-lists">
-                <MdChevronLeft 
+        <div className="movie-row-container">
+            <h2 className="movie-row-title">{title}</h2>
+            <div className="movie-row-list" id="slider">
+                <button 
                     onClick={() => slide(-500)}
-                    className="bg-white rounded-full group-hover:block text-gray-700" 
-                    size={40}
-                />
-                <div className="scroll-bar" id={`slider` + rowId}>
+                    className="movie-row-mdchev-left" 
+                >
+                    <MdChevronLeft />
+                </button>
+                <div className="movie-row-scroll" id="slider">
                     {movies.map((movie) => (
-                        <h1><MovieItem key={movie.id} movie={movie} /></h1>
+                        (movie.backdrop_path ?
+                            <h1><MovieItem key={movie.id} movie={movie} /></h1> 
+                            : "")
                     ))}
                 </div>
-                <MdChevronRight />
+                <button 
+                    onClick={() => slide(500)}
+                    className="movie-row-mdchev-right" 
+                >
+                    <MdChevronRight  />
+                </button>
             </div>
-        </>
+        </div>
     )
 }
 

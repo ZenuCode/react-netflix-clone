@@ -2,7 +2,7 @@ import './App.css';
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from './createTheme';
-import Profile from "./pages/Profile";
+import Profile from "./pages/Movies/Profile";
 import Signup from "./pages/Signup/Signup";
 import { AuthContextProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -13,6 +13,7 @@ import Step2Info from './pages/Signup/Step2-Info';
 import PlanForm from './pages/Signup/Planform';
 import SelectPay from './pages/Signup/SelectPay';
 import PaymentLoading from './pages/Signup/PaymentLoading';
+import Home from './pages/Movies/Home';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <AuthContextProvider>
           <Routes>
+            <Route path='/home' element={<Home />} />
             <Route path="/" element={<Homepage />} />
             <Route path="/signin" element={<Signin />} />
             <Route path='/step1' element={<Step1 />} />

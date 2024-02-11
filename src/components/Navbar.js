@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 import { DropdownButton, Dropdown } from 'react-bootstrap';
 
-const Navbar = () => {
+const Navbar = (props) => {
     const { user, logOut } = UserAuth();
     const navigate = useNavigate();
 
@@ -25,22 +25,33 @@ const Navbar = () => {
             {
                 user?.email ? (
                     <div className="nav-left">
-                        <select className="nav-lang-btn">
-                            <option className="nav-lang-ele">English</option>
-                            <option className="nav-lang-ele">Korean</option>
-                        </select>
-
+                        {props.profile ?
+                            <Link to='/profile'>
+                                <button className="nav-profile-btn">Profile</button>
+                            </Link>
+                            :
+                            <select className="nav-lang-btn">
+                                <option className="nav-lang-ele">English</option>
+                                <option className="nav-lang-ele">Korean</option>
+                            </select>
+                        }
                         <button onClick={handleLogout} className="nav-signinout-btn">
                             Sign Out
                         </button>
                     </div>
                 ) : (
                     <div className="nav-left">
-                        <select className="nav-lang-btn">
-                            <option className="nav-lang-ele"> English</option>
-                            <option className="nav-lang-ele">Korean</option>
-                        </select>
-                        
+                        {props.profile ?
+                            <Link to='/profile'>
+                                <button className="nav-profile-btn">Profile</button>
+                            </Link>
+                            :
+                            <select className="nav-lang-btn">
+                                <option className="nav-lang-ele">English</option>
+                                <option className="nav-lang-ele">Korean</option>
+                            </select>
+                        }
+
                         <Link to='/signin'>
                             <button className="nav-signinout-btn">Sign In</button>
                         </Link>
