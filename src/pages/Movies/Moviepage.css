@@ -1,0 +1,88 @@
+/* Navbar */
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.nav-signinout-btn,
+.nav-profile-btn {
+    border: none;
+    color: white;
+    width: 4.5rem;
+    height: 2rem;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.nav-signinout-btn {
+    background-color: red;
+}
+
+.nav-profile-btn {
+    display: flex;
+    flex-direction: column;
+    width: 4rem;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none!important;
+}
+
+.nav-lang-ele {
+    display: flex;
+    width: 8rem;
+    height: 40px;
+    background-color: black;
+    justify-content: center;
+}
+
+.nav-lang-img {
+    color: white;
+    background: linear-gradient(to bottom, black, white);
+}
+
+.bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.nav-logo {
+    width: 14rem;
+}
+
+/* Movie Page */
+
+.movie-page-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    background: no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    gap: 400px;
+}
+
+.movie-page-left {
+    width: 50%;
+}
+
+
+
+.movie-page-right {
+    width: 50%;
+}

@@ -4,6 +4,7 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
 const MovieRow = ({title, url}) => {
     const [movies, setMovies] = useState([]);
+    const rowId = Math.floor(Math.random() * 1000);
 
     useEffect(() => {
         fetch(url)
@@ -12,14 +13,14 @@ const MovieRow = ({title, url}) => {
     }, [url]);
 
     const slide = (offset) => {
-        const slider = document.getElementById('slider')
+        const slider = document.getElementById(`slider-${rowId}`)
         slider.scrollLeft = slider.scrollLeft + offset;
     }
 
     return (
         <div className="movie-row-container">
             <h2 className="movie-row-title">{title}</h2>
-            <div className="movie-row-list" id="slider">
+            <div className="movie-row-list" id={`slider-${rowId}`}>
                 <button 
                     onClick={() => slide(-500)}
                     className="movie-row-mdchev-left" 

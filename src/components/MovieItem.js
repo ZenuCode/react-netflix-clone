@@ -4,13 +4,15 @@ import { FaHeart, FaRegHeart } from "react-icons/fa"
 import { db } from "../services/firebase";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore"
 import { UserAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const MovieItem = ({ movie }) => {
     const [like, setLike] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
     const { user } = UserAuth();
+    const navigate = useNavigate();
     
-    const { title, backdrop_path, poster_path } = movie;
+    const { backdrop_path } = movie;
 
     const markFavShow = async () => {
         const userEmail = user?.email;
@@ -27,7 +29,7 @@ const MovieItem = ({ movie }) => {
     }
 
     const handleNavigate = () => {
-        
+        navigate("/movie-page", { state: { movie: movie }});
     }
 
     return (

@@ -14,6 +14,7 @@ import PlanForm from './pages/Signup/Planform';
 import SelectPay from './pages/Signup/SelectPay';
 import PaymentLoading from './pages/Signup/PaymentLoading';
 import Home from './pages/Movies/Home';
+import MoviePage from './pages/Movies/MoviePage';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
             <Route path='/planform' element={<PlanForm />} />
             <Route path='/selectpay' element={<SelectPay />} />
             <Route path='payment-loading' element={<PaymentLoading />} />
+            <Route path='movie-page' element={<MoviePage />} />
             <Route
               path="/profile"
               element={

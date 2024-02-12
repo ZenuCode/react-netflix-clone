@@ -12,7 +12,6 @@ const MovieTop = () => {
         fetch(endpoints.popular)
             .then(res => res.json())
             .then((res) => {
-                console.log(res);
                 const movies = res.results;
                 const randomMovie = movies[Math.floor(Math.random() * movies.length)]
                 setMovie(randomMovie);
