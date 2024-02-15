@@ -74,7 +74,7 @@
     background: no-repeat center center fixed;
     background-size: cover;
     color: white;
-    gap: 250px;
+    gap: 200px;
 }
 
 .movie-page-bottom {
@@ -86,23 +86,88 @@
 .movie-page-left {
     width: 50%;
     padding-left: 40px;
+    padding-bottom: 0px;
 }
 
 .movie-page-title {
-    font-size: 55px;
+    font-size: 60px;
+    margin-bottom: 30px;
 }
 
 .movie-page-about-container {
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    font-size: 22px;
 }
 
+.movie-page-about-divider {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.movie-page-info {
+    width: 90%;
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.movie-page-homepage {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.movie-page-btn {
+    width: 130px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.movie-page-play {
+    background-color: black;
+}
+
+.movie-page-trailer {
+    background-color: blue;
+}
 
 
 .movie-page-right {
     width: 50%;
+    margin-bottom: 60px;
+    margin-left: 10px;
+}
+
+.movie-page-right-text {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.movie-page-poster,
+.movie-page-actor {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
 }
 
 .movie-page-poster-img {
     width: 100px;
+}
+
+/* Page Map */
+
+.page-map-container {
+    text-align: center;
+    width: 80%;
+    margin-left: 0;
+    margin-right: 0;
 }
