@@ -74,15 +74,35 @@
     background: no-repeat center center fixed;
     background-size: cover;
     color: white;
-    gap: 400px;
+    gap: 250px;
+}
+
+.movie-page-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
 }
 
 .movie-page-left {
     width: 50%;
+    padding-left: 40px;
+}
+
+.movie-page-title {
+    font-size: 55px;
+}
+
+.movie-page-about-container {
+    display: flex;
+    gap: 20px;
 }
 
 
 
 .movie-page-right {
     width: 50%;
+}
+
+.movie-page-poster-img {
+    width: 100px;
 }
