@@ -127,20 +127,6 @@ const MoviePage = () => {
                     </div>
                 </div>
             </div>
-            {/* {showVideo && (
-                <div className="video-overlay">
-                    <div className="video-wrapper">
-                        <button className="close-button" onClick={handleClose}>Close</button>
-                        <iframe
-                            title="Movie Trailer"
-                            width="560"
-                            height="315"
-                            src={`https://www.youtube.com/watch?v=${movie.videos.results[0].key}`}
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-                </div>
-            )} */}
         </div>
     )
 }

@@ -114,20 +114,10 @@
 }
 
 .movie-top-playbtn {
-    width: 70px;
+    width: 140px;
     height: 40px;
     background-color: red;
     border: solid rgba(0, 0, 0, 0.295) 1px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-}
-
-.movie-top-savebtn {
-    width: 120px;
-    height: 40px;
-    background-color: black;
-    border: solid white 1px;
     border-radius: 5px;
     cursor: pointer;
     color: white;
@@ -249,7 +239,7 @@
     gap: 14px;
     color: white;
     width: 100%;
-    z-index: 90;
+    z-index: 5;
 }
 
 .movie-item-heart, .movie-item-heart-container {

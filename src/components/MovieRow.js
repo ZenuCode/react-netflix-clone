@@ -4,6 +4,7 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
 const MovieRow = ({title, url}) => {
     const [movies, setMovies] = useState([]);
+    const [isHovered, setIsHovered] = useState(false);
     const rowId = Math.floor(Math.random() * 1000);
 
     useEffect(() => {
@@ -20,13 +21,19 @@ const MovieRow = ({title, url}) => {
     return (
         <div className="movie-row-container">
             <h2 className="movie-row-title">{title}</h2>
-            <div className="movie-row-list" id={`slider-${rowId}`}>
-                <button 
+            <div 
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                className="movie-row-list" 
+                id={`slider-${rowId}`}
+            >
+
+                { isHovered && <button 
                     onClick={() => slide(-500)}
                     className="movie-row-mdchev-left" 
                 >
                     <MdChevronLeft />
-                </button>
+                </button>}
                 <div className="movie-row-scroll" id="slider">
                     {movies.map((movie) => (
                         (movie.backdrop_path ?
@@ -34,12 +41,12 @@ const MovieRow = ({title, url}) => {
                             : "")
                     ))}
                 </div>
-                <button 
+                { isHovered && <button 
                     onClick={() => slide(500)}
                     className="movie-row-mdchev-right" 
                 >
                     <MdChevronRight  />
-                </button>
+                </button>}
             </div>
         </div>
     )

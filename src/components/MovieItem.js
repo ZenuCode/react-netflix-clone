@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { imageUrl } from "../services/movieServices";
 import { FaHeart, FaRegHeart } from "react-icons/fa"
 import { db } from "../services/firebase";
-import { arrayUnion, doc, updateDoc } from "firebase/firestore"
+import { arrayRemove, arrayUnion, doc, getDoc, updateDoc } from "firebase/firestore"
 import { UserAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -14,19 +14,40 @@ const MovieItem = ({ movie }) => {
     
     const { backdrop_path } = movie;
 
-    const markFavShow = async () => {
-        const userEmail = user?.email;
+    useEffect(() => {
+        const fetchLikedMovies = async () => {
+            try {
+                const userDoc = doc(db, 'users', user.email);
+                const userSnapshot = await getDoc(userDoc);
+                if (userSnapshot.exists()) {
+                    const userData = userSnapshot.data();
+                    if (userData.favShows && userData.favShows.some(item => item.id === movie.id)) {
+                        setLike(true);
+                    }
+                }
+            } catch (error) {
+                console.error("Error fetching fav movies:", error);
+            }
+        };
 
-        if (userEmail) {
-            const userDoc = doc(db, 'users', userEmail);
-            setLike(!like)
+        fetchLikedMovies();
+    }, [movie, user]);
+
+    const markFavShow = async (e) => {
+        e.stopPropagation();
+        
+        const userDoc = doc(db, 'users', user.email);
+        if (like) {
+            await updateDoc(userDoc, {
+                favShows: arrayRemove({ ...movie }),
+            });
+        } else {
             await updateDoc(userDoc, {
                 favShows: arrayUnion({ ...movie }),
-            })
-        } else {
-            alert("Login to save a movie");
+            });
         }
-    }
+        setLike(!like);
+    };
 
     const handleNavigate = () => {
         navigate("/movie-page", { state: { movie: movie }});
@@ -42,7 +63,7 @@ const MovieItem = ({ movie }) => {
         >
             {isHovered &&
                 (<div className="movie-item-info">
-                    <p onClick={markFavShow} className="movie-item-heart-container">
+                    <p onClick={(e) => markFavShow(e)} className="movie-item-heart-container">
                         {like ? <FaHeart className="movie-item-heart" size={20} /> : <FaRegHeart className="movie-item-heart" size={20} />}
                     </p>
                     <p className="movie-item-title">{movie.title}</p>

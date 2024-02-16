@@ -1,0 +1,37 @@
+.profile-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://assets.nflxext.com/ffe/siteui/vlv3/9134db96-10d6-4a64-a619-a21da22f8999/325e6bcc-7960-4b4e-8c80-8fecc45e50b2/KR-en-20240115-trifectadaily-perspective_alpha_website_large.jpg");
+    object-fit: cover;
+    height: 940px;
+}
+
+.profile-info {
+    padding-left: 50px;
+}
+
+.profile-title {
+    font-size: 40px;
+    color: white;
+}
+
+.profile-img-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.profile-img {
+    width: 200px;
+    cursor: pointer;
+}
+
+.profile-email-display {
+    display: flex;
+    width: 200px;
+    height: 2rem;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}

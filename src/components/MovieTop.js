@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import endpoints, { imageUrl } from "../services/movieServices";
 import "../pages/Movies/Home.css";
 import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
 
 const MovieTop = () => {
 
     const [movie, setMovie] = useState({});
     const { title, backdrop_path, release_date, overview } = movie;
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch(endpoints.popular)
@@ -17,6 +19,10 @@ const MovieTop = () => {
                 setMovie(randomMovie);
             })
     }, []);
+
+    const handleNavigate = () => {
+        navigate("/movie-page", { state: { movie: movie }});
+    }
 
 
     const shrink = (str, length) => {
@@ -35,8 +41,7 @@ const MovieTop = () => {
             <div className="move-top-info">
                 <h1 className="movie-top-title">{title}</h1>
                 <div className="movie-top-btncontainer">
-                    <button className="movie-top-playbtn">Play</button>
-                    <button className="movie-top-savebtn">Watch Later</button>
+                    <button className="movie-top-playbtn" onClick={handleNavigate}>Go to Movie</button>
                 </div>
                 <p className="movie-top-date">{release_date}</p>
                 <p className="movie-top-overview">{shrink(overview, 320)}</p>
