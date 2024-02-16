@@ -29,7 +29,8 @@ const MovieTop = () => {
     }
 
     return (
-        <div className="movie-top-container" style={{ backgroundImage: `url(${imageUrl(backdrop_path, "original")})` }}>
+        <div className="movie-top-container">
+            <div className="movie-top-background" style={{ backgroundImage: `url(${imageUrl(backdrop_path, "original")})` }}></div>
             <Navbar profile={true}/>
             <div className="move-top-info">
                 <h1 className="movie-top-title">{title}</h1>

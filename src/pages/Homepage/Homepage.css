@@ -61,6 +61,7 @@
   border-radius: 5px;
   font-size: 20px;
   border: none;
+  cursor: pointer;
 }
 
 .hp-home-line {
@@ -150,6 +151,7 @@
   height: 2rem;
   border-radius: 5px;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .nav-signinout-btn {

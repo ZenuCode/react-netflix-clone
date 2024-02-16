@@ -10,7 +10,7 @@ const MoviePage = () => {
     const [movie, setMovie] = useState({});
     const [credits, setCredits] = useState({});
     const [poster, setPoster] = useState({});
-    const [isLoading, setIsLoading] = useState(true); // Add loading state
+    const [isLoading, setIsLoading] = useState(true);
     const [showVideo, setShowVideo] = useState(false);
     
     const location = useLocation();
@@ -32,17 +32,21 @@ const MoviePage = () => {
                 const posterData = await posterResponse.json();
                 setPoster(posterData.posters.slice(0, 8));
 
-                setIsLoading(false); // Update loading state
+                setIsLoading(false);
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
         };
 
         fetchData();
-    }, []);
+    }, [id]);
 
     if (isLoading) {
         return <div>Loading...</div>; // Display loading indicator
+    }
+
+    const handleAlert = () => {
+        alert("One day we might have a movie.")
     }
 
     const handleClick = () => {
@@ -55,13 +59,14 @@ const MoviePage = () => {
       };
 
     return (
-        <div className="movie-page-container" style={{ backgroundImage: `url(${imageUrl(movie.backdrop_path, "original")})` }}>
+        <div className="movie-page-container">
+            <div className="movie-page-background" style={{ backgroundImage: `url(${imageUrl(movie.backdrop_path, "original")})`, filter: "brightness(50%)" }}></div>
             <Navbar profile={true} />
             <div className="movie-page-bottom">
                 <div className="movie-page-left">
                     <p className="movie-page-title">{movie.title}</p>
                     <div className="movie-page-about-container">
-                        <p>{movie.vote_average} | {movie.vote_count}</p>
+                        <p className="movie-page-rating">⭐ {movie.vote_average} | {movie.vote_count}</p>
                         <p>{movie.runtime} min</p>
                         <p className="movie-page-about-divider">⋅</p>
                         {movie.genres.map((genre) => (
@@ -71,20 +76,25 @@ const MoviePage = () => {
                         <p>{movie.release_date.slice(0, 4)}</p>
                     </div>
                     <p className="movie-page-info">{movie.overview}</p>
-                    <div className="movie-page-homepage">
+                    {movie.homepage && ( <div className="movie-page-homepage">
                         <p>Homepage</p>
                         <p>:</p>
-                        <a href={`${movie.homepage}`}>{movie.homepage}</a>
-                    </div>
-                    <button className="movie-page-btn movie-page-play">Play Now</button>
+                        <a 
+                            href={`${movie.homepage}`}
+                            style={{ color: 'white' }}
+                        >{movie.homepage}</a>
+                    </div> )}
+                    <button className="movie-page-btn movie-page-play" onClick={handleAlert}>Play Now</button>
                     <button className="movie-page-btn movie-page-trailer" onClick={handleClick}>
                         Trailer
                     </button>
                     {showVideo && (
                         <div className="video-overlay">
                             <div className="video-wrapper">
-                                <button className="close-button" onClick={handleClose}>Close</button>
-                                <YouTube videoId={`${movie.videos.results[1].key}`} />
+                                <button className="close-button" onClick={handleClose}>X</button>
+                                <div className="youtube-player">
+                                    <YouTube videoId={`${movie.videos.results[1].key}`} />
+                                </div>
                             </div>
                         </div>
                     )}

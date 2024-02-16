@@ -1,7 +1,7 @@
 import "./Signup.css";
 import "./Planform.css";
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import PlanFormComp from "../../components/PlanFormComp";
 import data from './PlanformData.js';
 
@@ -9,6 +9,9 @@ const PlanForm = () => {
     const [isVisible, setIsVisible] = useState(null);
     const [selectedPlan, setSelectedPlan] = useState(1);
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const { email, password } = location.state;
 
     const one = data.one;
     const two = data.two;
@@ -23,7 +26,8 @@ const PlanForm = () => {
     const handleNavigate = () => {
         setIsVisible(false);
         setTimeout(() => {
-            navigate("/selectpay");
+            console.log(email, password);
+            navigate("/selectpay", { state: { email, password } });
         }, 300);
     }
 

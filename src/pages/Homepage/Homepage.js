@@ -4,12 +4,19 @@ import { useNavigate } from "react-router-dom";
 import HomeInfo from "../../components/HomeInfo";
 import HomeFAQ from "../../components/HomeFAQ";
 import "./Homepage.css"
+import { UserAuth } from "../../context/AuthContext";
 
 const Homepage = () => {
     const [email, setEmail] = useState('');
     const [buttonClicked, setButtonClicked] = useState(false);
     const emailRef = useRef(null);
     const navigate = useNavigate();
+
+    const { user } = UserAuth() || {};
+
+    if (user) {
+        navigate("/home");
+    }
 
     function handlerFormSubmit(event) {
         event.preventDefault();

@@ -45,7 +45,7 @@ const Step1 = () => {
             setTimeout(() => {
                 navigate("/Step2-Info", { state: { email, password } });
             }, 200);
-        } else if (isEmailValid ===false) {
+        } else if (isEmailValid === false) {
             setIsEmailValid(false);
         } else if (isPasswordValid === false) {
             setIsPasswordValid(false);
@@ -105,7 +105,7 @@ const Step1 = () => {
                             onChange={(e) => setAgreement(!agreement)}
                         />
                         <span className="signup-checkbox-text">
-                            This is a fake website and this part usually asks for usage of personal information.
+                            This part usually asks for usage of personal information. Please click this to move on.
                         </span>
                     </p>
                     <p className="signup-form-checkbox">

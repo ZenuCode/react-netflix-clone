@@ -18,9 +18,14 @@ const Navbar = (props) => {
 
     return (
         <div className="nav-container">
-            <Link to='/'>
-                <img className="nav-logo" src="/assets/fakelogo.png" alt="logo" />
-            </Link>
+            {user ?
+                <Link to='/home'>
+                    <img className="nav-logo" src="/assets/fakelogo.png" alt="logo" />
+                </Link> :
+                <Link to='/'>
+                    <   img className="nav-logo" src="/assets/fakelogo.png" alt="logo" />
+                </Link>
+            }
 
             {
                 user?.email ? (

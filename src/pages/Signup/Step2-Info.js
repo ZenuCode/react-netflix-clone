@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Signup.css"
 
 const Step2Info = () => {
     const [isVisible, setIsVisible] = useState(null);
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const { email, password } = location.state;
 
     useEffect(() => {
         setTimeout(() => {
@@ -15,7 +18,7 @@ const Step2Info = () => {
     const handleNavigate = () => {
         setIsVisible(false);
         setTimeout(() => {
-            navigate("/planform");
+            navigate("/planform", { state: { email, password } });
         }, 200); 
     }
 
