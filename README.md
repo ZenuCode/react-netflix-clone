@@ -23,7 +23,7 @@
     - 영화 API에서 사용되는 데이터는 반복적으로 사용되기 때문에 잘 구현하면 더 사용하기 편리한 Firebase 선택
     - 사용하면서 장점: 실시간 데이터를 통해 빠른 반영, Authentication에 있어서 더 빠름, 배우고 Setup하기 비교적 편리함
     - 단점: MongoDB에 비교해서는 보안 규칙이 까다로워서 신경을 더 써야됐다, 만약 더 다양한 Data를 처리 해야된다면 성능/가격적 문제가 고려 될수도 있다
-    ![Firebase](https://github.com/ZenuCode/react-netflix-clone/assets/100235605/2c891b28-7761-4d1b-87b7-fea520ae0111)
+    ![image](https://github.com/ZenuCode/react-netflix-clone/assets/100235605/01eebdb0-ad25-449f-89a7-8fb3f75b42e0)
     - 아래와 같이 모든 데이터를 유저마다 다르게 묶어서 빠르게 엑세스 가능
 
 # Components
