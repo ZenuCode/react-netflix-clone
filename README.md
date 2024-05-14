@@ -12,8 +12,17 @@
       make it easier for me to handle data.
     - Advantages: Real-Time Data, Authentication, Easy to Setup,
     - Disadvantages: Security Rules were a bit complex compared to MongoDB, If more data were added performance would cause an issue
-- DB
-    - Firebase
+
+# 웹페이지 로직
+- React에 더 익숙해지고자 기존에 앵귤러로 만들어 봤던 넷플릭스 클론 코딩
+    - TMDB API를 사용해 전반적인 데이터 처리 및 사용
+    - SCSS와 Material UI를 통해 디자인 구현
+    - npm-react-youtube을 사용해서 트레일러로 사용되는 영상을 실행할 수 있게 구축
+    - Dotenv로 사용자에게 API관련 정보를 가리고 Firebase Token을 사용해서 민감한 정보 가리기
+- 많이 사용해 봤던 MongoDB에서 벗어나 새로운 DB를 통해 장점/단점을 보고 싶어서 Firebase로 구축
+    - 영화 API에서 사용되는 데이터는 반복적으로 사용되기 때문에 잘 구현하면 더 사용하기 편리한 Firebase 선택
+    - 사용하면서 장점: 실시간 데이터를 통해 빠른 반영, Authentication에 있어서 더 빠름, 배우고 Setup하기 비교적 편리함
+    - 단점: MongoDB에 비교해서는 보안 규칙이 까다로워서 신경을 더 써야됐다, 만약 더 다양한 Data를 처리 해야된다면 성능/가격적 문제가 고려 될수도 있다
 
 # Components
 ### Homepage
