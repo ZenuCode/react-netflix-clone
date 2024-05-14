@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Fakeflix Website
 
 # Completed
 - Entire Website Logic:
@@ -8,6 +8,31 @@
     - Personal Profile with Protected Routes
 - Firebase Setup & Deployment connected to Github
 - Services with TMDB API to personal service file
+
+# Components
+### Homepage
+![Homepage](https://github.com/ZenuCode/react-netflix-clone/assets/100235605/095b44f4-217a-4f16-a4b6-7f996e5d989b)
+
+
+### Signup
+![Signup](https://github.com/ZenuCode/react-netflix-clone/assets/100235605/9d63a009-7a4f-4be6-a11a-65a90fe52cae)
+
+
+### Signin
+![Signin](https://github.com/ZenuCode/react-netflix-clone/assets/100235605/71cd5557-0ebb-46a7-8828-ebfcf53bfb51)
+
+
+### MoviePage
+![MoviePage](https://github.com/ZenuCode/react-netflix-clone/assets/100235605/f35fff14-1e14-4919-a329-715b479e64ae)
+
+
+### Likes
+![Likes](https://github.com/ZenuCode/react-netflix-clone/assets/100235605/2ceb454e-bdcf-4aed-afa1-729147af073f)
+
+
+### EachMovie
+![EachMovie](https://github.com/ZenuCode/react-netflix-clone/assets/100235605/75f7a144-252a-4625-8df9-9054131485b8)
+
 
 # Need to Add/Complete
 - Styling of Entire Website
